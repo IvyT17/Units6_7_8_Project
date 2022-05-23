@@ -34,8 +34,10 @@ public class Connect4
     System.out.println("Welcome to not 2, not 3, but 4! Tis Connect4!");
     players[0] = new Player("O");
     players[1] = new Player("@");
-    System.out.println("Player 1: " + players[0].getPiece()
-            + " Player 2: " + players[1].getPiece());
+    for(int i = 1; i <= players.length; i++)
+    {
+      System.out.println("Player " + i + ": " + players[i - 1].getPiece());
+    }
     System.out.println();
     Board board = new Board(7, 7);
     board.printBoard();
